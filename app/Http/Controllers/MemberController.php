@@ -11,6 +11,14 @@ class MemberController extends Controller
     public function index()
     {
         $members = Member::all();
+
+        foreach ($members as $member) {
+        if (Carbon::now()->greaterThan($member->end_date)) {
+            $member->status = 'inactive';
+            $member->save();
+        }
+    }
+
         return view('members.index', compact('members'));
     }
 
@@ -40,5 +48,36 @@ class MemberController extends Controller
         ]);
 
         return redirect()->route('members.index')->with('success', 'Member berhasil ditambahkan.');
+    }
+
+    public function edit($id)
+    {
+        $member = Member::findOrFail($id);
+        return view('members.edit', compact('member'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name'  => 'required',
+            'email' => 'required|email|unique:members,email,' . $id,
+            'phone' => 'required',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date',
+            'status' => 'required'
+        ]);
+
+        $member = Member::findOrFail($id);
+        $member->update($request->all());
+
+        return redirect()->route('members.index')->with('success', 'Member berhasil diperbarui.');
+    }
+
+    public function destroy($id)
+    {
+        $member = Member::findOrFail($id);
+        $member->delete();
+
+        return redirect()->route('members.index')->with('success', 'Member berhasil dihapus.');
     }
 }

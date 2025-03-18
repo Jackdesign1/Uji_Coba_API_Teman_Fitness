@@ -49,6 +49,30 @@
         </a>
     </li>
 
+<!-- Data Mentor -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/mentors') }}">
+            <i class="fas fa-users"></i>
+            <span>Data Mentor</span>
+        </a>
+    </li>
+
+
+    <!-- Data Kelas -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/kelas') }}">
+            <i class="fas fa-users"></i>
+            <span>Data Kelas</span>
+        </a>
+    </li>
+    <!-- Data Workout -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/workouts') }}">
+            <i class="fas fa-users"></i>
+            <span>Data Workout</span>
+        </a>
+    </li>
+
     <hr class="sidebar-divider">
 </ul>
 <!-- End of Sidebar -->
