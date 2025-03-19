@@ -22,7 +22,8 @@
     <div id="wrapper">
         <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/') }}">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/home') }}">
+    
         <div class="sidebar-brand-icon">
             <i class="fas fa-dumbbell"></i> <!-- Ganti ikon sesuai tema gym -->
         </div>
@@ -70,6 +71,14 @@
         <a class="nav-link" href="{{ url('/workouts') }}">
             <i class="fas fa-users"></i>
             <span>Data Workout</span>
+        </a>
+    </li>
+
+    <!-- Data Teman -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/teman') }}">
+            <i class="fas fa-users"></i>
+            <span>Data Teman</span>
         </a>
     </li>
 

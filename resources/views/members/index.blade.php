@@ -6,7 +6,7 @@
     <a href="{{ route('members.create') }}" class="btn btn-primary mb-3">Tambah Member</a>
     
     <table class="table table-bordered">
-        <thead class="table-light">
+        <thead class="table mt-3">
             <tr>
                 <th>Nama</th>
                 <th>Email</th>
