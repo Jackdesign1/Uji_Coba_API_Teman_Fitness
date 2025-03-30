@@ -81,6 +81,17 @@
             <span>Data Teman</span>
         </a>
     </li>
+    
+<li class="nav-item">
+    <a class="nav-link" href="{{ url('/company-profile') }}">
+        <i class="fas fa-building"></i>
+        <span>Company Profile</span>
+    </a>
+</li>
+
+
+
+
 
     <hr class="sidebar-divider">
 </ul>
