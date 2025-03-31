@@ -74,13 +74,6 @@
         </a>
     </li>
 
-    <!-- Data Teman -->
-    <li class="nav-item">
-        <a class="nav-link" href="{{ url('/teman') }}">
-            <i class="fas fa-users"></i>
-            <span>Data Teman</span>
-        </a>
-    </li>
     
 <li class="nav-item">
     <a class="nav-link" href="{{ url('/company-profile') }}">
