@@ -40,6 +40,7 @@ class MemberController extends Controller
 
         Member::create([
             'name'  => $request->name,
+            'password'  => $request->password,
             'email' => $request->email,
             'phone' => $request->phone,
             'start_date' => $request->start_date,
@@ -60,6 +61,7 @@ class MemberController extends Controller
     {
         $request->validate([
             'name'  => 'required',
+            'password'  => 'required',
             'email' => 'required|email|unique:members,email,' . $id,
             'phone' => 'required',
             'start_date' => 'required|date',

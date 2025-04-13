@@ -10,6 +10,11 @@
             <label for="name" class="form-label">Nama</label>
             <input type="text" class="form-control" id="name" name="name" required>
         </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="text" class="form-control" id="password" name="password" required>
+        </div>
         
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
