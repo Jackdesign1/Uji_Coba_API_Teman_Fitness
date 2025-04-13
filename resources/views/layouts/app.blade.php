@@ -32,16 +32,6 @@
 
     <hr class="sidebar-divider">
 
-
-
-    <!-- Aktivasi Member -->
-    <li class="nav-item">
-        <a class="nav-link" href="{{ url('/pendaftaran-member') }}">
-            <i class="fas fa-user-plus"></i>
-            <span>Pendaftaran Member</span>
-        </a>
-    </li>
-
     <!-- Data Member -->
     <li class="nav-item">
         <a class="nav-link" href="{{ url('/members') }}">
