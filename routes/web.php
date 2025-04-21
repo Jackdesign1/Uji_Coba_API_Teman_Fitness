@@ -6,8 +6,8 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\WorkoutController;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\KelasController;
-use App\Http\Controllers\TemanController;
 use App\Http\Controllers\CompanyProfileController;
+use App\Http\Controllers\BannerController;
 
 // Halaman utama langsung menampilkan Company Profile
 Route::get('/', [CompanyProfileController::class, 'public'])->name('company.public');
@@ -25,6 +25,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('mentors', MentorController::class);
     Route::resource('kelas', KelasController::class);
     Route::resource('teman', TemanController::class);
+    Route::resource('banner', BannerController::class);
+
 
   Route::get('/company-profile', [CompanyProfileController::class, 'index'])->name('company.index');
     Route::get('/company-profile/edit', [CompanyProfileController::class, 'edit'])->name('company.edit');

@@ -8,7 +8,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Custom fonts for this template-->
- 
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -23,7 +23,7 @@
         <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/home') }}">
-    
+
         <div class="sidebar-brand-icon">
             <i class="fas fa-dumbbell"></i> <!-- Ganti ikon sesuai tema gym -->
         </div>
@@ -64,7 +64,15 @@
         </a>
     </li>
 
-    
+    <!-- Data Workout -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/banner') }}">
+            <i class="fas fa-users"></i>
+            <span>Data Banner</span>
+        </a>
+    </li>
+
+
 <li class="nav-item">
     <a class="nav-link" href="{{ url('/company-profile') }}">
         <i class="fas fa-building"></i>
