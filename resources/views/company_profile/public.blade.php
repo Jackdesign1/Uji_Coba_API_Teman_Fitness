@@ -4,481 +4,301 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teman Fitness - Fitness Partner Gen-Z</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --black: #000000;
-            --white: #ffffff;
-            --gray: #f5f5f5;
-            --dark-gray: #222222;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--black);
-            background: var(--white);
-        }
-        
-        /* Navbar Minimalis */
-        .navbar {
-            background: var(--white) !important;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 15px 0;
-        }
-        .navbar-brand img {
-            height: 40px;
-        }
-        
-        /* Slider Fix */
-        .hero-slider-container {
-            max-height: 500px;
-            overflow: hidden;
-            margin-top: -80px;
-        }
-        .hero-slider {
-            height: 500px;
-        }
-        .carousel-item {
-            height: 100%;
-        }
-        .carousel-item img {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-            opacity: 0.7;
-        }
-        .carousel-caption {
-            bottom: 30%;
-            background: rgba(0,0,0,0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .carousel-caption h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-        }
-        
-        /* Fitur Fix */
-        .feature-section {
-            padding: 80px 0;
-            position: relative;
-            z-index: 2;
-        }
-        .feature-card {
-            border: none;
-            border-radius: 10px;
-            background: var(--white);
-            transition: all 0.3s;
-            height: 100%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-        .feature-icon {
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-            color: var(--black);
-        }
-        .phone-mockup {
-            max-width: 150px;
-            margin: 20px auto 0;
-            display: block;
-            border-radius: 10px;
-        }
-        
-        /* Responsive Fix */
-        @media (max-width: 768px) {
-            .hero-slider {
-                height: 400px;
-            }
-            .carousel-caption h1 {
-                font-size: 1.8rem;
-            }
-            .phone-mockup {
-                max-width: 120px;
-            }
-        }
-    
-        .btn-slider {
-            background: var(--white);
-            color: var(--black);
-            border: none;
-            padding: 12px 30px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-        
-        /* Section Style */
-        .section-padding {
-            padding: 100px 0;
-        }
-        .bg-gray {
-            background: var(--gray);
-        }
-        
-        /* Fitur Cards */
-        .feature-card {
-            border: none;
-            border-radius: 0;
-            background: var(--white);
-            transition: all 0.3s;
-            height: 100%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--black);
-        }
-        .phone-mockup {
-            max-width: 200px;
-            margin: 30px auto 0;
-            display: block;
-        }
-        
-        /* Testimoni */
-        .testimonial-card {
-            background: var(--white);
-            border: 1px solid #eee;
-            padding: 30px;
-        }
-        .testimonial-img {
-            width: 70px;
-            height: 70px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--black);
-            color: var(--white);
-            padding: 60px 0 20px;
-        }
-        .footer-logo {
-            filter: invert(100%);
-            height: 40px;
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
-<body>
+<body class="bg-gray-100 font-sans min-h-screen">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                
-
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#fitur">Fitur</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimoni">Testimoni</a></li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a class="btn btn-outline-black" href="#download">Download</a>
-                    </li>
-                </ul>
+    <nav class="bg-white shadow-lg sticky-top">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="flex items-center">
+                    <img src="{{ asset('Logo_Teman_Fitness.png') }}"  alt="Teman Fitness Logo" class="h-10">
+                </a>
+                <div class="flex space-x-4">
+                    <a href="#home" class="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md transition">Home</a>
+                    <a href="#fitur" class="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md transition">Fitur</a>
+                    <a href="#tentang" class="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md transition">Tentang</a>
+                    <a href="#program" class="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md transition">Program</a>
+                    <a href="#testimoni" class="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md transition">Testimoni</a>
+                    <a href="#download" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900">Daftar</a>
+                </div>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gray-800 text-white py-32">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Fitness" class="w-full h-full object-cover opacity-50">
+        </div>
+        <div class="relative max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Bentuk Tubuh Ideal Bersama Teman Fitness</h1>
+            <p class="text-lg md:text-xl mb-6">Platform fitness Gen-Z untuk gaya hidup sehat yang seru dan terjangkau!</p>
+            <a href="#download" class="inline-block bg-white text-gray-800 px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transition">Daftar Sekarang</a>
+        </div>
+    </section>
 
-    <!-- Slider dengan Container Pembatas -->
-    <div class="hero-slider-container">
-        <section class="hero-slider" id="home">
-            <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-                             class="d-block w-100" 
-                             alt="Fitness">
-                        <div class="carousel-caption text-center">
-                            <h1 class="mb-3">RAIH TUBUH INDAHMU</h1>
-                            <p class="lead mb-4">Dengan Teman Fitness</p>
-                            <a href="#" class="btn btn-light">AYO DAFTAR SEKARANG</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-                             class="d-block w-100" 
-                             alt="Workout">
-                        <div class="carousel-caption text-center">
-                            <h1 class="mb-3">START YOUR JOURNEY</h1>
-                            <p class="lead mb-4">Bersama Komunitas Kami</p>
-                            <a href="#" class="btn btn-light">GABUNG SEKARANG</a>
-                        </div>
-                    </div>
+    <!-- Fitur Unggulan -->
+    <section id="fitur" class="py-16 bg-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Fitur Unggulan</h2>
+            <p class="text-center text-gray-600 mb-12">Kenapa memilih Teman Fitness?</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Mudah Dijangkau</h3>
+                    <p class="text-gray-600">Dekat dengan pusat kota dan akses mudah dari segala arah.</p>
                 </div>
-            </div>
-        </section>
-    </div>
-
-    
-
-   
-
-    <!-- Tentang -->
-    <section class="section-padding bg-gray" id="tentang">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-                         alt="Tentang Kami" 
-                         class="img-fluid shadow">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Konsultan Profesional</h3>
+                    <p class="text-gray-600">Membantu memilih program latihan yang sesuai kebutuhanmu.</p>
                 </div>
-                <div class="col-lg-6">
-                    <h2 class="fw-bold mb-4">TENTANG KAMI</h2>
-                    <p class="lead mb-4">Teman Fitness adalah platform fitness generasi baru</p>
-                    <p>Kami menghubungkan pecinta fitness dengan gym terbaik, pelatih profesional, dan komunitas yang mendukung. Dengan teknologi terkini, kami membuat perjalanan fitnessmu lebih mudah dan menyenangkan.</p>
-                    <a href="#" class="btn btn-outline-dark mt-3">Pelajari Lebih Lanjut</a>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Terakreditasi</h3>
+                    <p class="text-gray-600">Fasilitas dan pelatih bersertifikasi dengan standar tinggi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container py-5">
-    <div class="row align-items-center">
-        <!-- Kolom Gambar -->
-        <div class="col-md-6 mb-4 mb-md-0">
-            <img src="gym-facility.jpg" alt="Fasilitas Gym" class="img-fluid rounded shadow-lg">
-        </div>
-
-        <!-- Kolom Konten -->
-        <div class="col-md-6">
-            <div class="ps-md-4"> <!-- Tambahkan padding kiri di desktop -->
-                <div class="mt-4">
-                    <h3 class="text-primary mb-3">Membership mulai dari Rp249.000/bulan</h3>
-                    <p class="text-muted mb-4">
-                        Bebas olahraga di semua klub dengan fasilitas premium dan akses kelas FIT HUB sepuasnya
-                    </p>
-                    <a href="#" class="btn btn-primary btn-lg px-4 py-3">
-                        Lihat Paket Membership →
-                    </a>
+    <!-- Tentang Kami -->
+    <section id="tentang" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Tentang Teman Fitness</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tentang Kami" class="w-full rounded-lg shadow-lg">
+                <div>
+                    <p class="text-lg text-gray-600 mb-4">Selamat datang di <strong>Teman Fitness</strong>, platform fitness terbaik untuk Gen-Z!</p>
+                    <p class="text-gray-600">Kami berdedikasi untuk membantu setiap anggota mencapai tujuan kesehatan dan kebugaran melalui fasilitas lengkap, program latihan inovatif, dan bimbingan pelatih profesional. Dengan teknologi terkini, kami membuat perjalanan fitnessmu lebih mudah dan menyenangkan.</p>
+                    <a href="#" class="inline-block mt-4 text-gray-800 font-semibold hover:underline">Pelajari Lebih Lanjut</a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-  <div class="container my-5">
-    <div class="row align-items-center">
-        
-
-<div class="container-fluid bg-secondary py-5"> <!-- Background abu-abu -->
-    <div class="container">
-        <div class="row justify-content-center"> <!-- Pusatkan konten -->
-            <div class="col-md-8 text-center"> <!-- Lebar konten dan teks tengah -->
-                <div class="p-4"> <!-- Padding internal -->
-                    <h3 class="text-primary fw-bold mb-3">Promo Kelas Pilates Hanya Rp65.900/sesi</h3>
-                    <h2 class="display-4 mb-4 text-white">Tunggu Apa Lagi? Ayo Daftar!</h2>
-                    <p class="lead mb-4 text-light">Untuk raih postur tubuh idaman</p>
-                    <a href="#" class="btn btn-danger btn-lg px-5 py-3">
-                        Daftar Sekarang!
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-     <!-- Fitur (Tampilan Grid Fix) -->
-    <section class="feature-section" id="fitur">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold mb-3">FITUR UNGGULAN</h2>
-                <p class="text-muted">Yang bikin kamu makin semangat workout</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-dumbbell"></i>
+    <!-- Kenapa Teman Fitness (Timeline) -->
+    <section class="py-16 bg-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Kenapa Teman Fitness?</h2>
+            <div class="relative">
+                <div class="absolute left-1/2 w-1 bg-gray-400 h-full transform -translate-x-1/2"></div>
+                <div class="space-y-12">
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 p-4">
+                            <p class="text-gray-600">Fasilitas lengkap dan modern, dari alat fitness berkualitas hingga ruang latihan nyaman. Didukung pelatih profesional untuk metode latihan efektif dan personal.</p>
                         </div>
-                        <h4 class="mb-3">Workout Planner</h4>
-                        <p class="text-muted">Rencana latihan personal berdasarkan goalmu</p>
-                        <img src="{{ asset('iphone.png') }}"  class="phone-mockup" alt="Workout Planner">
+                        <div class="md:w-1/2 p-4">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Gym" class="w-full rounded-lg shadow-lg">
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 bg-gray-800 text-white w-10 h-10 flex items-center justify-center rounded-full transform -translate-x-1/2 -translate-y-1/2 border-2 border-white">1</div>
                     </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-users"></i>
+                    <div class="relative flex flex-col md:flex-row-reverse items-center">
+                        <div class="md:w-1/2 p-4">
+                            <p class="text-gray-600">Kombinasi fasilitas terbaik, pelatih bersertifikat, dan komunitas suportif. Jadi bagian dari komunitas yang saling menyemangati untuk hidup sehat.</p>
                         </div>
-                        <h4 class="mb-3">Crowd Meter</h4>
-                        <p class="text-muted">Pantau kepadatan gym real-time</p>
-                        <img src="{{ asset('iphone.png') }}"  class="phone-mockup" alt="Workout Planner"> 
+                        <div class="md:w-1/2 p-4">
+                            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Gym" class="w-full rounded-lg shadow-lg">
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 bg-gray-800 text-white w-10 h-10 flex items-center justify-center rounded-full transform -translate-x-1/2 -translate-y-1/2 border-2 border-white">2</div>
                     </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 p-4">
+                            <p class="text-gray-600">Alat gym lengkap, program latihan variatif, dan pelatih profesional. Suasana nyaman bikin kamu semangat dan konsisten latihan.</p>
                         </div>
-                        <h4 class="mb-3">Progress Tracker</h4>
-                        <p class="text-muted">Pantau perkembangan tubuhmu</p>
-                        <img src="{{ asset('iphone.png') }}"  class="phone-mockup" alt="Workout Planner">
+                        <div class="md:w-1/2 p-4">
+                            <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Gym" class="w-full rounded-lg shadow-lg">
+                        </div>
+                        <div class="absolute left-1/2 top-1/2 bg-gray-800 text-white w-10 h-10 flex items-center justify-center rounded-full transform -translate-x-1/2 -translate-y-1/2 border-2 border-white">3</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Program -->
+    <section id="program" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Kurikulum Program</h2>
+            <div class="space-y-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Program Pemula" class="w-full rounded-lg shadow-lg">
+                    <div class="relative pl-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Program Pemula (4 Minggu)</h3>
+                        <p class="text-gray-600">Membangun kebiasaan, mengenal dasar latihan, dan memperbaiki postur.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Program Menengah" class="w-full rounded-lg shadow-lg">
+                    <div class="relative pl-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Program Menengah (6 Minggu)</h3>
+                        <p class="text-gray-600">Meningkatkan kekuatan, massa otot, dan daya tahan tubuh.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Program Lanjutan" class="w-full rounded-lg shadow-lg">
+                    <div class="relative pl-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Program Lanjutan (8 Minggu)</h3>
+                        <p class="text-gray-600">Cutting, bulking, atau transformasi fisik intensif.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- CTA Download -->
-    <section class="py-5 bg-black text-white" id="download">
-        <div class="container text-center py-5">
-            <h2 class="fw-bold mb-4">DOWNLOAD APLIKASI KAMI</h2>
-            <p class="lead mb-5">Mulai perjalanan fitnessmu sekarang</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#" class="btn btn-light btn-lg px-4">
-                    <i class="fab fa-apple me-2"></i> App Store
-                </a>
-                <a href="#" class="btn btn-light btn-lg px-4">
-                    <i class="fab fa-google-play me-2"></i> Play Store
-                </a>
+    <!-- Membership -->
+    <section class="py-16 bg-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Daftar Sekarang</h2>
+            <p class="text-lg text-gray-600 mb-6"><i>Jangan Tunggu Besok, <span class="text-gray-800 font-semibold">Mulai Perubahanmu Hari Ini!</span></i></p>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Akses 1 Bulan di Teman Fitness</h3>
+                <ul class="text-left text-gray-600 space-y-2 mb-4">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i> Akses bebas ke seluruh fasilitas gym.</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i> Gratis konsultasi & program latihan personal.</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i> Pendampingan dari trainer profesional.</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i> Akses komunitas member Teman Fitness.</li>
+                </ul>
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <p class="text-gray-500 line-through">Rp250.000</p>
+                        <p class="text-2xl font-bold text-gray-800">Rp150.000</p>
+                    </div>
+                    <img src="{{ asset('Logo_Teman_Fitness.png') }}"  alt="Logo" class="h-10">
+                </div>
+                <a href="#download" class="block bg-gray-800 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-900 transition">Join Now</a>
+                <p class="text-gray-600 text-sm mt-2">Punya kode promo?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aplikasi -->
+    <section id="download" class="py-16 bg-gradient-to-b from-gray-200 to-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Aplikasi Eksklusif Member</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-lg text-gray-600 mb-4">Dapatkan kemudahan akses video tutorial, modul, dan progres latihan dalam satu aplikasi.</p>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Hanya untuk Member, Download Sekarang</h3>
+                    <a href="#" class="inline-block">
+                        <img src="https://via.placeholder.com/150x50?text=Google+Play" alt="Google Play" class="h-12">
+                    </a>
+                </div>
+                <img src="{{ asset('mockup.png') }}"  alt="App Mockup" class="mx-auto max-w-xs">
             </div>
         </div>
     </section>
 
     <!-- Testimoni -->
-    <section class="section-padding" id="testimoni">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold mb-3">APA KATA MEREKA</h2>
-                <p class="text-muted">Testimoni dari member kami</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="testimonial-card h-100">
-                        <div class="d-flex align-items-center mb-4">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" class="testimonial-img me-3" alt="Sarah">
-                            <div>
-                                <h5 class="mb-0">Sarah</h5>
-                                <p class="text-muted mb-0">Member sejak 2023</p>
-                            </div>
-                        </div>
-                        <p>"Aplikasinya sangat membantu untuk tracking progress latihan. Fitur Crowd Meter favoritku!"</p>
-                        <div class="text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+    <section id="testimoni" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Apa Kata Mereka</h2>
+            <p class="text-center text-gray-600 mb-12">Testimoni dari member kami</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800">Sarah</h4>
+                            <p class="text-gray-600 text-sm">Member sejak 2023</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="testimonial-card h-100">
-                        <div class="d-flex align-items-center mb-4">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="testimonial-img me-3" alt="Rizky">
-                            <div>
-                                <h5 class="mb-0">Rizky</h5>
-                                <p class="text-muted mb-0">Member sejak 2022</p>
-                            </div>
-                        </div>
-                        <p>"Komunitasnya sangat supportive. Sekarang workout jadi lebih konsisten!"</p>
-                        <div class="text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
+                    <p class="text-gray-600 mb-4">"Aplikasi sangat membantu untuk tracking progress. Crowd Meter favoritku!"</p>
+                    <div class="text-gray-800">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
                 </div>
-                
-                <div class="col-md-4">
-                    <div class="testimonial-card h-100">
-                        <div class="d-flex align-items-center mb-4">
-                            <img src="https://randomuser.me/api/portraits/women/63.jpg" class="testimonial-img me-3" alt="Dewi">
-                            <div>
-                                <h5 class="mb-0">Dewi</h5>
-                                <p class="text-muted mb-0">Member sejak 2024</p>
-                            </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Rizky" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800">Rizky</h4>
+                            <p class="text-gray-600 text-sm">Member sejak 2022</p>
                         </div>
-                        <p>"Workout Planner-nya sangat personalized. Cocok untuk pemula seperti saya."</p>
-                        <div class="text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Komunitasnya sangat suportif. Workout jadi lebih konsisten!"</p>
+                    <div class="text-gray-800">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Dewi" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800">Dewi</h4>
+                            <p class="text-gray-600 text-sm">Member sejak 2024</p>
                         </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Workout Planner sangat personalized. Cocok untuk pemula!"</p>
+                    <div class="text-gray-800">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
+    <!-- Lokasi -->
+    <section class="py-16 bg-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Lokasi</h2>
+            <p class="text-lg text-gray-600 mb-4">Jalan Gajah Mada No 54 RT 34 RW 35, Sun City Mall Sidoarjo, Jawa Timur, Indonesia</p>
+            <img src="https://via.placeholder.com/450x300?text=Map+Placeholder" alt="Peta Lokasi" class="mx-auto rounded-lg shadow-lg mb-4">
+            <a href="https://www.google.com/maps" target="_blank" class="inline-block bg-gray-800 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-900 transition">Lihat di Google Maps</a>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <img src="{{ asset('Logo_Teman_Fitness.png') }}" 
- class="footer-logo" alt="Teman Fitness">
-                    <p>Platform fitness terbaik untuk generasi muda Indonesia.</p>
-                    <div class="mt-4">
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-tiktok fa-lg"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-youtube fa-lg"></i></a>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="{{ asset('Logo_Teman_Fitness.png') }}"  alt="Teman Fitness Logo" class="h-10 mb-4">
+                    <p class="text-gray-400">Platform fitness terbaik untuk generasi muda Indonesia.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-tiktok fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube fa-lg"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5 class="mb-4">Perusahaan</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Tentang</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Lokasi</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Perusahaan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Tentang</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Lokasi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5 class="mb-4">Produk</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Fitur</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Harga</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Produk</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Fitur</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Harga</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
                     </ul>
                 </div>
-                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">support@temanfitness.com</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">+62 812-3456-7890</a></li>
+                    </ul>
+                </div>
             </div>
-            <hr class="my-5 bg-light">
-            <div class="text-center">
-                <p class="mb-0">&copy; 2024 Teman Fitness. All rights reserved.</p>
-            </div>
+            <hr class="border-gray-700 my-8">
+            <p class="text-center text-gray-400">© 2025 Teman Fitness. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scroll dengan offset untuk navbar
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
