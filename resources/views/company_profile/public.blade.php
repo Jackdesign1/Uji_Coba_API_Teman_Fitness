@@ -145,31 +145,47 @@
         </div>
     </section>
 
-    <!-- Membership -->
-    <section class="py-16 bg-gray-200">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">Daftar Sekarang</h2>
-            <p class="text-lg text-gray-600 mb-6"><i>Jangan Tunggu Besok, <span class="text-gray-800 font-semibold">Mulai Perubahanmu Hari Ini!</span></i></p>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Akses 1 Bulan di Teman Fitness</h3>
-                <ul class="text-left text-gray-600 space-y-2 mb-4">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i> Akses bebas ke seluruh fasilitas gym.</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i> Gratis konsultasi & program latihan personal.</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i> Pendampingan dari trainer profesional.</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-gray-800 mr-2"></i> Akses komunitas member Teman Fitness.</li>
-                </ul>
-                <div class="flex justify-between items-center mb-4">
-                    <div>
-                        <p class="text-gray-500 line-through">Rp250.000</p>
-                        <p class="text-2xl font-bold text-gray-800">Rp150.000</p>
-                    </div>
-                    <img src="{{ asset('Logo_Teman_Fitness.png') }}"  alt="Logo" class="h-10">
+<!-- Membership -->
+<section class="py-20 bg-gray-200">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Mulai Perjalanan Fitnessmu</h2>
+        <p class="text-xl text-gray-600 mb-8 italic"><span class="text-gray-800 font-semibold">Jangan Tunggu Besok!</span> Raih Tubuh Idamanmu Hari Ini</p>
+        <div class="bg-white p-8 rounded-xl shadow-2xl max-w-2xl mx-auto transition-all duration-300 hover:shadow-3xl">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">Akses 1 Bulan di Teman Fitness</h3>
+            <p class="text-sm text-red-600 font-semibold mb-4">Promo Terbatas! Hanya sampai akhir bulan ini</p>
+            <ul class="text-left text-gray-600 space-y-4 mb-6">
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-gray-800 text-xl mr-3 mt-1"></i>
+                    <span>Akses bebas ke seluruh fasilitas gym modern dan lengkap.</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-gray-800 text-xl mr-3 mt-1"></i>
+                    <span>Gratis konsultasi dan program latihan personal sesuai tujuanmu.</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-gray-800 text-xl mr-3 mt-1"></i>
+                    <span>Pendampingan intensif dari trainer profesional bersertifikat.</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check-circle text-gray-800 text-xl mr-3 mt-1"></i>
+                    <span>Gabung komunitas member Teman Fitness yang suportif.</span>
+                </li>
+            </ul>
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <p class="text-gray-500 line-through text-lg">Rp250.000</p>
+                    <p class="text-3xl font-bold text-gray-800">Rp150.000</p>
+                    <p class="text-gray-600 text-sm">Pembayaran untuk 1 bulan</p>
                 </div>
-                <a href="#download" class="block bg-gray-800 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-900 transition">Join Now</a>
-                <p class="text-gray-600 text-sm mt-2">Punya kode promo?</p>
+                <img src="{{ asset('Logo_Teman_Fitness.png') }}" alt="Teman Fitness Logo" class="h-12">
             </div>
+            <a href="#download" class="block bg-gray-800 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-gray-900 transition-transform duration-300 transform hover:scale-105">
+                Join Now
+            </a>
+            <p class="text-gray-600 text-sm mt-4 hover:underline cursor-pointer">Punya kode promo?</p>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Aplikasi -->
     <section id="download" class="py-16 bg-gradient-to-b from-gray-200 to-gray-100">
@@ -180,7 +196,7 @@
                     <p class="text-lg text-gray-600 mb-4">Dapatkan kemudahan akses video tutorial, modul, dan progres latihan dalam satu aplikasi.</p>
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Hanya untuk Member, Download Sekarang</h3>
                     <a href="#" class="inline-block">
-                        <img src="https://via.placeholder.com/150x50?text=Google+Play" alt="Google Play" class="h-12">
+                        <img src="{{ asset('Google.png') }}" alt="Google Play" class="h-12">
                     </a>
                 </div>
                 <img src="{{ asset('mockup.png') }}"  alt="App Mockup" class="mx-auto max-w-xs">
@@ -249,15 +265,29 @@
         </div>
     </section>
 
-    <!-- Lokasi -->
-    <section class="py-16 bg-gray-200">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">Lokasi</h2>
-            <p class="text-lg text-gray-600 mb-4">Jalan Gajah Mada No 54 RT 34 RW 35, Sun City Mall Sidoarjo, Jawa Timur, Indonesia</p>
-            <img src="https://via.placeholder.com/450x300?text=Map+Placeholder" alt="Peta Lokasi" class="mx-auto rounded-lg shadow-lg mb-4">
-            <a href="https://www.google.com/maps" target="_blank" class="inline-block bg-gray-800 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-900 transition">Lihat di Google Maps</a>
+<!-- Lokasi -->
+<section class="py-16 bg-gray-200">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Temukan Kami</h2>
+        <p class="text-lg text-gray-600 mb-4">Masih Belum Ada Lokasi Fisik :)</p>
+        <div class="flex justify-center space-x-4 mb-6">
+            <p class="text-gray-600"><i class="fas fa-phone-alt mr-2"></i>+62 812-3456-7890</p>
+            <p class="text-gray-600"><i class="fas fa-envelope mr-2"></i>support@temanfitness.com</p>
         </div>
-    </section>
+        <div class="relative w-full max-w-3xl mx-auto rounded-xl shadow-2xl overflow-hidden border border-gray-300">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.692318976135!2d112.716299314774!3d-7.447108994614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e4d5b7b3c5b1%3A0x1234567890abcdef!2sSun%20City%20Mall%20Sidoarjo!5e0!3m2!1sen!2sid!4v169876543210!5m2!1sen!2sid"
+                class="w-full h-96 md:h-[500px] border-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <a href="https://www.google.com/maps" target="_blank" class="inline-flex items-center mt-6 bg-gray-800 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-900 transition">
+            <i class="fas fa-map-marker-alt mr-2"></i>Lihat di Google Maps
+        </a>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
