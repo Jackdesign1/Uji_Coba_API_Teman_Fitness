@@ -10,7 +10,8 @@ class Member extends Model
 {
     use HasFactory;
 
-    protected $table = 'members'; // Nama tabel di database
+    protected $table = 'members';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'name',
@@ -21,6 +22,15 @@ class Member extends Model
         'end_date',
         'status'
     ];
+
+    protected $hidden = [
+        'password',
+    ];
+
+    public function getAuthPassword()
+    {
+        return $this->password;
+    }
 
     // Mutator status agar otomatis berubah
     public function getStatusAttribute($value)
